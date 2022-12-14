@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "report_tables",
+  "info": {
+    "singularName": "report-table",
+    "pluralName": "report-tables",
+    "displayName": "Report Table",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "report_groups": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::report-group.report-group",
+      "mappedBy": "report_table"
+    },
+    "report_date": {
+      "type": "date"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "fish_reports",
+  "info": {
+    "singularName": "fish-report",
+    "pluralName": "fish-reports",
+    "displayName": "Fish Report",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "report_date": {
+      "type": "date"
+    },
+    "report_groups": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::report-group.report-group"
+    }
+  }
+}

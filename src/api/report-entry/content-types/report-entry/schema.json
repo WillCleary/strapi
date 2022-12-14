@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "report_entries",
+  "info": {
+    "singularName": "report-entry",
+    "pluralName": "report-entries",
+    "displayName": "Report Entry",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text",
+      "required": true,
+      "unique": false
+    },
+    "productId": {
+      "type": "string"
+    },
+    "origin": {
+      "type": "string"
+    },
+    "fresh": {
+      "type": "boolean",
+      "default": false
+    },
+    "refreshed": {
+      "type": "boolean",
+      "default": false
+    },
+    "frozen": {
+      "type": "boolean",
+      "default": false
+    },
+    "referenceId": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "report_group": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::report-group.report-group",
+      "inversedBy": "report_entries"
+    }
+  }
+}
