@@ -5,7 +5,7 @@ const config = parse(process.env.DATABASE_URL);
 
 module.exports = ({ env }) => ({
   connection: {
-    filename: path.join(__dirname, '..', env('DATABASE_FILENAME', '.tmp/data.db')),
+    filename: path.join(__dirname, '..', env('DATABASE_FILENAME')),
   },
   useNullAsDefault: true,
 });
